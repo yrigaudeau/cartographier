@@ -1,0 +1,136 @@
+.bouton {
+    height: 25px;
+    width: 150px;
+    background-color: brown;
+    color: white;
+    margin: 1px;
+
+}
+
+.bouton, .zoomer {
+    border-color: black;
+    font-family: Verdana, sans-serif;
+    border-style: inset;
+    border-radius:15px;
+	border:1px solid #333029;
+    margin: 1px;
+}
+
+.bouton:not(.active) {
+    background-color: wheat !important;
+    color: black;
+    border-style: outset;
+}
+
+.zoomer {
+    height: 25px;
+    width: 72px;
+    background-color: brown;
+    color: white
+}
+
+body {
+    /* reset */
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.rectFond {
+    fill: #ffffff;
+    stroke:#000000;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit:4;
+    stroke-dasharray:none;
+}
+
+.xRect {
+    fill: #ff9100;
+    stroke:#000000;
+    stroke-width: 0.264583;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-dasharray: none;
+    stroke-opacity: 1;
+
+    font-family: Verdana, sans-serif;
+    cursor: pointer;
+}
+
+.xTexte > tspan{
+    cursor: pointer;
+}
+
+.nomVillageCarte > tspan{
+    cursor: pointer;
+}
+
+.xTexte, .txtRect, .nomVillageCarte, .nomVillageInfo {
+    font-family: Verdana, sans-serif;
+    font-style:normal;
+    font-weight:normal;
+    font-size:19px;
+    font-family:sans-serif;
+    white-space:pre;
+    fill:#000000;
+    fill-opacity:1;
+    stroke:none;
+}
+
+.nomVillageInfo {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nomVillageCarte {
+    font-size: 20px;
+    /*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+    text-shadow: 0 0 3px white;
+}
+
+.avantValeur {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.echelleLine {
+    stroke: brown;
+    stroke-width: 2px;
+}
+
+#echelle {
+    font-size: 18px;
+}
+
+#ptCardinaux {
+    position: fixed;
+    z-index: 1;
+}
+
+#Nord, #Sud {
+    stroke: black;
+    stroke-width: 1;
+}
+
+#Nord {
+    fill: #fd2408;
+}
+
+#Sud {
+    fill: #08e1fd;
+}
+
+#NordTexte {
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+svg text{
+    user-select: none;
+}
