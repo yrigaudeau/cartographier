@@ -263,10 +263,11 @@ def Cartographier(lien1, lien2, Name="carte"):
             banListe.append(1)
     #print(banListe)
     
-    #On crée les boutons catégories
+    #On crée les boutons catégories en leur assignant une couleur
     for i in range(len(categories)):
         if( banListe[i] == 0 ):
-            [r, g, b] = tuple(round(j * 255) for j in colorsys.hsv_to_rgb(i / len(categories), 1, 1))
+            value = int(i/2) if i%2==0 else int(value+len(categories)/2)
+            [r, g, b] = tuple(round(j * 255) for j in colorsys.hsv_to_rgb(value / len(categories), 1, 1))
             couleur = '#%02x%02x%02x' % (r, g, b)
             CreerBouton("bouton categories", categories[i], "reply_click(this)", couleur, categories[i])
             #print(couleur, categories[i])
